@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": {},
   "devDependencies": {
     "@nrwl/js": "15.8.5",
+    "@nrwl/node": "^15.8.5",
     "@nrwl/workspace": "15.8.5",
     "nx": "15.8.5",
     "prettier": "^2.6.2"
