@@ -10,7 +10,7 @@ on:
     types: [opened, reopened]
 
 jobs:
-  test:
+  Lint:
     runs-on: ubuntu-latest
 
     steps:

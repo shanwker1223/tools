@@ -10,7 +10,8 @@ on:
     types: [opened, reopened]
 
 jobs:
-  test:
+  Test:
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:

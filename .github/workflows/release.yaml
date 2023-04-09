@@ -14,7 +14,7 @@ on:
       - 'alpha'
 
 jobs:
-  test:
+  Release:
     runs-on: ubuntu-latest
 
     steps:
