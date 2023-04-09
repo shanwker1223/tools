@@ -33,7 +33,7 @@ jobs:
         id: nx-jest-test
         continue-on-error: true
         run: |
-          yarn nx run-many --all --target=test-report --parallalel
+          npx nx run-many --all --target=test-report --parallalel
 
       - uses: ArtiomTr/jest-coverage-report-action@v2
         id: tools-node-coverage
