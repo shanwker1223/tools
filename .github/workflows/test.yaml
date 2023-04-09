@@ -1,0 +1,53 @@
+name: Test
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  Test:
+    permissions: write-all
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+      - run: npm ci
+
+      - name: Checking files
+        id: nx-jest-test
+        continue-on-error: true
+        run: |
+          npx nx run-many --all --target=test-report --parallalel
+
+      - uses: ArtiomTr/jest-coverage-report-action@v2
+        id: tools-node-coverage
+        with:
+          coverage-file: report-tools-node.json
+          base-coverage-file: report-tools-node.json
+          output: report-markdown
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: tools-node-coverage
+          message: |
+            # Node Tools
+            ${{ steps.tools-node-coverage.outputs.report }}
+
+      - name: Exit if test failts
+        if: ${{ steps.nx-jest-test.outcome == 'failure' }}
+        run: exit 1
