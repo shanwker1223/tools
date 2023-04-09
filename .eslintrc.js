@@ -1,7 +1,7 @@
-{
+module.exports = {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
+  "plugins": ["@nrwl/nx", "autofix", "import"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -33,10 +33,11 @@
     },
     {
       "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      ...require('eslint-plugin-jest').configs.recommended,
       "env": {
-        "jest": true
+        "jest": true,
+        'jest/globals': true
       },
-      "rules": {}
     }
   ]
 }
