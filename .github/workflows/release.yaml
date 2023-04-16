@@ -12,6 +12,7 @@ on:
       - 'next'
       - 'beta'
       - 'alpha'
+    workflow_dispatch:
 
 jobs:
   Release:
