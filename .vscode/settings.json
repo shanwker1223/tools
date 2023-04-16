@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "update",
-        "CI"
+        "CI",
+        "new-package"
     ]
 }

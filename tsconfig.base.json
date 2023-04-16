@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@shanwker/node-tools": ["packages/tools/node/src/index.ts"]
+      "@shanwker/node-tools": ["packages/tools/node/src/index.ts"],
+      "@shanwker/nx-cdk-tools": ["packages/tools/cdk/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

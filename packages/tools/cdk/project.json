@@ -1,7 +1,7 @@
 {
-  "name": "tools-node",
+  "name": "tools-cdk",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/tools/node/src",
+  "sourceRoot": "packages/tools/cdk/src",
   "projectType": "library",
   "targets": {
     "build": {
@@ -10,12 +10,12 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/packages/tools/node",
-        "tsConfig": "packages/tools/node/tsconfig.lib.json",
-        "packageJson": "packages/tools/node/package.json",
-        "main": "packages/tools/node/src/index.ts",
+        "outputPath": "dist/packages/tools/cdk",
+        "tsConfig": "packages/tools/cdk/tsconfig.lib.json",
+        "packageJson": "packages/tools/cdk/package.json",
+        "main": "packages/tools/cdk/src/index.ts",
         "assets": [
-          "packages/tools/node/*.md"
+          "packages/tools/cdk/*.md"
         ]
       }
     },
@@ -26,7 +26,7 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "packages/tools/node/**/*.ts"
+          "packages/tools/cdk/**/*.ts"
         ]
       }
     },
@@ -37,10 +37,10 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "packages/tools/node/jest.config.ts",
+        "jestConfig": "packages/tools/cdk/jest.config.ts",
         "passWithNoTests": true,
         "json": true,
-        "outputFile": "report-tools-node.json"
+        "outputFile": "report-tools-cdk.json"
       },
       "configurations": {
         "ci": {
@@ -55,7 +55,7 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "packages/tools/node/jest.config.ts",
+        "jestConfig": "packages/tools/cdk/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -71,14 +71,13 @@
         "github": true,
         "changelog": true,
         "npm": true,
-        "tagFormat": "tools-node-v${VERSION}",
+        "tagFormat": "tools-cdk-v${VERSION}",
         "repositoryUrl": "https://github.com/shanwker1223/tools",
-        "buildTarget": "tools-node:build",
-        "outputPath": "dist/packages/tools/node"
+        "buildTarget": "tools-cdk:build",
+        "outputPath": "dist/packages/tools/cdk"
       }
     }
+
   },
-  "tags": [
-    "node"
-  ]
+  "tags": []
 }
