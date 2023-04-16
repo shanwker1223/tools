@@ -72,7 +72,9 @@
         "changelog": true,
         "npm": true,
         "tagFormat": "tools-node-v${VERSION}",
-        "repositoryUrl": "https://github.com/shanwker1223/tools"
+        "repositoryUrl": "https://github.com/shanwker1223/tools",
+        "buildTarget": "tools-node:build",
+        "outputPath": "dist/packages/tools/node"
       }
     }
   },
