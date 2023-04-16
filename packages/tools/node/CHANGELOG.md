@@ -1,3 +1,10 @@
+# [1.0.0-alpha.2](https://github.com/shanwker1223/tools/compare/tools-node-v1.0.0-alpha.1...tools-node-v1.0.0-alpha.2) (2023-04-16)
+
+
+### Features
+
+* test ([5c35241](https://github.com/shanwker1223/tools/commit/5c35241174bd5973ffde2212802e93fe860a67d4))
+
 # 1.0.0-alpha.1 (2023-04-16)
 
 
