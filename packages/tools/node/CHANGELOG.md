@@ -1,3 +1,10 @@
+# [1.0.0-alpha.4](https://github.com/shanwker1223/tools/compare/tools-node-v1.0.0-alpha.3...tools-node-v1.0.0-alpha.4) (2023-08-06)
+
+
+### Features
+
+* **aws:** :sparkles: Add base aws lambda handler wrapper ([0ea4985](https://github.com/shanwker1223/tools/commit/0ea49853fa9fbab72be3dd9cdf6fbc61e296660e))
+
 # [1.0.0-alpha.3](https://github.com/shanwker1223/tools/compare/tools-node-v1.0.0-alpha.2...tools-node-v1.0.0-alpha.3) (2023-04-16)
 
 
