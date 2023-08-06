@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "update",
         "CI",
-        "new-package"
+        "new-package",
+        "aws"
     ]
 }

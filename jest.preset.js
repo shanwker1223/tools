@@ -8,7 +8,7 @@ module.exports = {
       '**/*.ts',
       '!**/jest.config.ts',
       '!src/index.ts',
-      '!src/lib/*/index.ts',
+      '!src/lib/**/index.ts',
     ],
     coverageReporters: ['html'],
     coverageThreshold: {

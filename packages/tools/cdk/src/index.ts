@@ -1,1 +1,1 @@
-export * from './lib/ToolsCdk';
+export * from '@lib/environment/index';
