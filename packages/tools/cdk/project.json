@@ -63,19 +63,19 @@
           "codeCoverage": true
         }
       }
-    },
-    "semantic-release": {
-      "executor": "@theunderscorer/nx-semantic-release:semantic-release",
-      "options": {
-        "github": true,
-        "changelog": true,
-        "npm": true,
-        "tagFormat": "tools-cdk-v${VERSION}",
-        "repositoryUrl": "https://github.com/shanwker1223/tools",
-        "buildTarget": "tools-cdk:build",
-        "outputPath": "dist/packages/tools/cdk"
-      }
     }
+    // "semantic-release": {
+    //   "executor": "@theunderscorer/nx-semantic-release:semantic-release",
+    //   "options": {
+    //     "github": true,
+    //     "changelog": true,
+    //     "npm": true,
+    //     "tagFormat": "tools-cdk-v${VERSION}",
+    //     "repositoryUrl": "https://github.com/shanwker1223/tools",
+    //     "buildTarget": "tools-cdk:build",
+    //     "outputPath": "dist/packages/tools/cdk"
+    //   }
+    // }
 
   },
   "tags": []
