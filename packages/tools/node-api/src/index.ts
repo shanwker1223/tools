@@ -1,3 +1,3 @@
 export {
-    HttpStatusCode as HTTPStatusCode
+    HttpStatusCode
 } from "@lib/http/HttpStatusCode";
