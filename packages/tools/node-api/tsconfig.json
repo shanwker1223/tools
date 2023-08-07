@@ -17,7 +17,6 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@lib/*": ["packages/tools/node-api/src/lib/*"],
-      "@errors/*": ["packages/tools/node-api/src/lib/errors/*"],
     },
   }
 }
