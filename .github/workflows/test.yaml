@@ -48,6 +48,33 @@ jobs:
             # Node Tools
             ${{ steps.tools-node-coverage.outputs.report }}
 
+      - uses: ArtiomTr/jest-coverage-report-action@v2
+        id: tools-node-api-coverage
+        with:
+          coverage-file: report-tools-node-api.json
+          base-coverage-file: report-tools-node-api.json
+          output: report-markdown
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: tools-node-api-coverage
+          message: |
+            # Node API Tools
+            ${{ steps.tools-node-api-coverage.outputs.report }}
+
+      - uses: ArtiomTr/jest-coverage-report-action@v2
+        id: tools-cdk-coverage
+        with:
+          coverage-file: report-tools-cdk.json
+          base-coverage-file: report-tools-cdk.json
+          output: report-markdown
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: tools-cdk-coverage
+          message: |
+            # AWS CDK Tools
+            ${{ steps.tools-cdk-coverage.outputs.report }}
+
+
       - name: Exit if test failts
         if: ${{ steps.nx-jest-test.outcome == 'failure' }}
         run: exit 1
