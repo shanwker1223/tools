@@ -5,36 +5,27 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/tools/cdk",
         "tsConfig": "packages/tools/cdk/tsconfig.lib.json",
         "packageJson": "packages/tools/cdk/package.json",
         "main": "packages/tools/cdk/src/index.ts",
-        "assets": [
-          "packages/tools/cdk/*.md"
-        ]
+        "assets": ["packages/tools/cdk/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/tools/cdk/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/tools/cdk/**/*.ts"]
       }
     },
     "test-report": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "packages/tools/cdk/jest.config.ts",
         "passWithNoTests": true,
@@ -49,10 +40,8 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "packages/tools/cdk/jest.config.ts",
         "passWithNoTests": true
@@ -64,19 +53,6 @@
         }
       }
     }
-    // "semantic-release": {
-    //   "executor": "@theunderscorer/nx-semantic-release:semantic-release",
-    //   "options": {
-    //     "github": true,
-    //     "changelog": true,
-    //     "npm": true,
-    //     "tagFormat": "tools-cdk-v${VERSION}",
-    //     "repositoryUrl": "https://github.com/shanwker1223/tools",
-    //     "buildTarget": "tools-cdk:build",
-    //     "outputPath": "dist/packages/tools/cdk"
-    //   }
-    // }
-
   },
   "tags": []
 }
